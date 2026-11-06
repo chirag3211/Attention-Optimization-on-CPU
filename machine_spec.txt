@@ -1,0 +1,24 @@
+CPU model                       : Intel Core Ultra 7 155H
+Microarchitecture               : Meteor Lake (P: Redwood Cove, E and LP-E: Crestmont)
+Physical cores                  : 16
+Logical cores (hardware threads): 22
+Performance / efficiency cores  : 6 P (HT) + 8 E + 2 LP-E
+Base clock (GHz)                : P 1.4 / E 0.9 / LP-E 0.7
+Max single-core clock (GHz)     : 4.8 (P-core turbo)
+All-core clock under load (GHz) : not measured directly; spec turbo ceilings used (P 4.8 / E 3.8 / LP-E 2.5)
+SIMD instruction set and width  : AVX2, 256-bit (8 FP32 lanes); no AVX-512
+FMA units per core              : P-core 2, E-core 2 x 128-bit
+Vector registers per core       : 16 x 256-bit (ymm)
+L1 data cache (per core)        : 48 KB (P), 32 KB (E)
+L2 cache (size, shared by)      : 2 MB per P-core; 2 MB per 4-core E cluster; 2 MB for the 2 LP-E cores
+L3 cache (size, shared by)      : 24 MB, shared
+Cache line size (bytes)         : 64
+RAM size (GB)                   : 32
+RAM type, speed (MT/s), channels: LPDDR5X, 7467 MT/s, 2 x 64-bit (128-bit total)
+Operating system                : Windows 11 (native, no WSL)
+Compiler and version            : clang 23.x (MSYS2 CLANG64), -O3 -march=native
+Peak FP32 GFLOP/s, one core     : 153.6   (4.8 GHz x 2 FMA x 8 lanes x 2)
+Peak FP32 GFLOP/s, all cores    : 1488   (upper bound at turbo: 6x4.8x32 + 8x3.8x16 + 2x2.5x16; not sustained)
+Memory bandwidth (GB/s)         : 62.2   (measured STREAM, 22 threads; theoretical 7467 x 16 B = 119.5)
+Ridge point, one core (FLOP/B)  : 2.5    (153.6 / 62.2)
+Ridge point, all cores (FLOP/B) : 23.9   (1488 / 62.2)
